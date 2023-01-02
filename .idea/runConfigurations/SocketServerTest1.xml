@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="SocketServerTest1" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="mysamples.JustTest.SocketServerTest1" />
+    <module name="Impinj" />
+    <option name="PROGRAM_PARAMETERS" value="3309" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

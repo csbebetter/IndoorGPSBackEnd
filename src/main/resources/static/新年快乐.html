@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+<!-- Table for aligning pinyin and Chinese characters -->
+<table>
+    <tr>
+        <th class="pinyin" id="pinyin1">xīn</th>
+        <th class="pinyin" id="pinyin2">nián</th>
+        <th class="pinyin" id="pinyin3">kuài</th>
+        <th class="pinyin" id="pinyin4">lè</th>
+    </tr>
+    <tr>
+        <td id="phraseChinese1">新</td>
+        <td id="phraseChinese2">年</td>
+        <td id="phraseChinese3">快</td>
+        <td id="phraseChinese4">樂</td>
+    </tr>
+</table>
+
+<h2 id="phraseEnglish">(Happy new year)</h2>
+
+<button type="button" id="button">
+    <p>Generate phrase</p>
+</button>
+
+<br>
+<br>
+<div class="wrapper">
+    <div class="buttonWrapper">
+        <div class="button button5"><p>光阴荏苒，岁月如歌</p></div>
+    </div>
+    <div class="buttonWrapper">
+        <div class="button button3"><p>律回春晖渐，万象始更新</p></div>
+    </div>
+    <div class="buttonWrapper">
+        <div class="button button2"><p>一元复始开新宇，万象更新绘新图</p></div>
+    </div>
+    <div class="buttonWrapper">
+        <div class="button button4"><p>过去一年忙碌多彩完美流逝，新一年的金色阳光洒满大地</p></div>
+    </div>
+
+</div>
+</body>
+<script>
+    var pinyin1 = document.getElementById("pinyin1");
+    var pinyin2 = document.getElementById("pinyin2");
+    var pinyin3 = document.getElementById("pinyin3");
+    var pinyin4 = document.getElementById("pinyin4");
+
+    var phraseChinese1 = document.getElementById("phraseChinese1");
+    var phraseChinese2 = document.getElementById("phraseChinese2");
+    var phraseChinese3 = document.getElementById("phraseChinese3");
+    var phraseChinese4 = document.getElementById("phraseChinese4");
+
+    var phraseEnglish = document.getElementById("phraseEnglish");
+
+    var button = document.getElementById("button");
+    var random = Math.random();
+
+    // Arrays for pinyin and Chinese characters
+    var p1 = [
+        "xīn",
+        "gōng",
+        "dà",
+        "wàn",
+        "nián",
+        "shēn",
+        "xīn",
+        "gōng"
+    ];
+
+    var p2 = [
+        "nián",
+        "xǐ",
+        "jí",
+        "shì",
+        "nián",
+        "tǐ",
+        "xiǎng",
+        "hè"
+    ];
+
+    var p3 = [
+        "kuài",
+        "fā",
+        "dà",
+        "rú",
+        "yǒu",
+        "jiàn",
+        "shì",
+        "xīn"
+    ];
+
+    var p4 = [
+        "lè",
+        "cái",
+        "lì",
+        "yì",
+        "yú",
+        "kāng",
+        "chéng",
+        "xǐ"
+    ];
+
+    var phrasesC1 = [
+        "新",
+        "恭",
+        "大",
+        "萬",
+        "年",
+        "身",
+        "心",
+        "恭",
+        "兔",
+        "青"
+    ];
+
+    var phrasesC2 = [
+        "年",
+        "喜",
+        "吉",
+        "事",
+        "年",
+        "體",
+        "想",
+        "賀",
+        "圆",
+        "春"
+    ];
+
+    var phrasesC3 = [
+        "快",
+        "發",
+        "大",
+        "如",
+        "有",
+        "健",
+        "事",
+        "新",
+        "鱼",
+        "永"
+    ];
+
+    var phrasesC4 = [
+        "樂",
+        "財",
+        "利",
+        "意",
+        "餘",
+        "康",
+        "成",
+        "禧",
+        "润",
+        "兔"
+    ];
+
+    // English phrases
+    // Translations taken from here: http://www.travelsintranslation.com/2014/01/cantonese-chinese-new-year-phrases/
+    var phrasesE = [
+        "(Happy new year)",
+        "(Congratulations on your prosperity)",
+        "(Great luck and prosperity)",
+        "(May 10,000 things go according to your wishes)",
+        "(Every year have more than you need)",
+        "(Wishing you good health)",
+        "(May all your heart's desires come true)",
+        "(Congratulations in the new year)",
+        "(A little chubby girl)",
+        "(Forever young)"
+    ];
+
+    // Sets text content as random phrase from arrays
+    pinyin1.textContent = p1[Math.floor(random * p1.length)];
+    pinyin2.textContent = p2[Math.floor(random * p2.length)];
+    pinyin3.textContent = p3[Math.floor(random * p3.length)];
+    pinyin4.textContent = p4[Math.floor(random * p4.length)];
+
+    phraseChinese1.textContent = phrasesC1[Math.floor(random * phrasesC1.length)];
+    phraseChinese2.textContent = phrasesC2[Math.floor(random * phrasesC2.length)];
+    phraseChinese3.textContent = phrasesC3[Math.floor(random * phrasesC3.length)];
+    phraseChinese4.textContent = phrasesC4[Math.floor(random * phrasesC4.length)];
+
+    phraseEnglish.textContent = phrasesE[Math.floor(random * phrasesE.length)];
+
+    var onClick = function () {
+        var random = Math.random();
+
+        pinyin1.textContent = p1[Math.floor(random * p1.length)];
+        pinyin2.textContent = p2[Math.floor(random * p2.length)];
+        pinyin3.textContent = p3[Math.floor(random * p3.length)];
+        pinyin4.textContent = p4[Math.floor(random * p4.length)];
+
+        phraseChinese1.textContent = phrasesC1[Math.floor(random * phrasesC1.length)];
+        phraseChinese2.textContent = phrasesC2[Math.floor(random * phrasesC2.length)];
+        phraseChinese3.textContent = phrasesC3[Math.floor(random * phrasesC3.length)];
+        phraseChinese4.textContent = phrasesC4[Math.floor(random * phrasesC4.length)];
+
+        phraseEnglish.textContent = phrasesE[Math.floor(random * phrasesE.length)];
+    }
+
+    // Sets text content as random phrase when button is clicked
+    button.addEventListener("click", onClick);
+
+</script>
+
+<style>
+    body {
+        background-color: #c6070c;
+        color: #ffe392;
+        font-family: "Lato", Helvetica, Arial, Hiragino Sans GB W6, sans-serif;
+        text-align: center;
+    }
+
+    table {
+        padding-top: 80px;
+        margin: auto;
+        width: 30%;
+    }
+
+    .pinyin {
+        height: 20px;
+        font-size: 1.1em;
+        letter-spacing: 3px;
+        font-weight: 400;
+    }
+
+    td {
+        font-size: 8em;
+        text-align: center;
+        font-weight: 700;
+        padding: 0px;
+    }
+
+    h2 {
+        margin-top: 15px;
+        margin-bottom: 100px;
+        font-size: 3em;
+        text-transform: uppercase;
+        font-weight: 700;
+        word-spacing: 5px;
+    }
+
+    p {
+        font-weight: 700;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+    }
+
+    button {
+        background-color: #ef941a;
+        color: #fffbe2;
+        width: 200px;
+        position: relative;
+        border-radius: 5px;
+        margin: 0;
+        padding: 0;
+        line-height: 0.5;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        font-size: 0.9em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    button:hover,
+    button:focus {
+        background-color: #efa134;
+    }
+
+    button:active {
+        transform: translate(0px, 2px);
+        -webkit-transform: translate(0px, 2px);
+    }
+
+
+</style>
+</html>
